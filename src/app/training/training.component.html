@@ -1,0 +1,47 @@
+<h2>Hey my {{title}}</h2><br />
+
+<img [src]='image' /> <br />
+
+<input type="text" [value]="inputValue" />
+
+<h3 [class.red-color]="applyClass">Apply Class</h3>
+
+<h3 [style.color]="applyStyle ? 'blue' : 'yellow'">Apply Style</h3>
+
+<div class="even">
+    <button (click)="onClick(name.value)">Click</button>
+    <input type="text" #name />
+    <h4>{{contentClick}}</h4>
+</div>
+
+<div class="two-way-binding">
+    <b>Input</b>
+    <input type="text" [(ngModel)]="fName" />
+    <input type="text" [(ngModel)]="lName" /><br />
+    <b>Full Name : </b> {{fName}} {{lName}}
+</div>
+
+<div *ngIf="showLine" class="ng-if">
+    <p>This is ngIf</p>
+</div>
+
+<div class="ng-switch" [ngSwitch]="color">
+    <p *ngSwitchCase="'red'">This is line ngSwitch red</p>
+    <p *ngSwitchCase="'blue'">This is line ngSwitch blue</p>
+    <p *ngSwitchCase="'yellow'">This is line ngSwitch yellow</p>
+    <p *ngSwitchDefault>This is line ngSwitchDefault</p>
+</div>
+
+<div class="ng-for">
+    <ul>
+        <li *ngFor="let color of colors">{{color}}</li>
+    </ul>
+</div>
+
+<div class="ng-class">
+    <p [ngClass]="{'cl-one':clOne,'cl-two':clTwo}">This is ngClass</p>
+    <button (click)="clickNgClass()">Click ngClass</button>
+</div>
+<div class="ng-style">
+    <p [ngStyle]="{'color':styleColor, 'background-color':styleBackground}">This is ngStyle</p>
+</div>
