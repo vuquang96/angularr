@@ -45,3 +45,27 @@
 <div class="ng-style">
     <p [ngStyle]="{'color':styleColor, 'background-color':styleBackground}">This is ngStyle</p>
 </div>
+
+<div class="input">
+    <p>Input {{nameInput}}</p>
+</div>
+
+<div class="output">
+    <div *ngFor="let name of names">
+        <b>{{name}}</b>
+        <button [disabled]="voted" (click)="vote(true)">Agree</button>
+        <button [disabled]="voted" (click)="vote(false)">Disgree</button>
+    </div> 
+</div>
+
+<div class="pipe">
+    <p>{{uppercase | uppercase}}</p>
+    <p>{{uppercase | lowercase}}</p>
+    <p>{{numberPercent | percent}}</p>
+    <p>{{number | number}}</p>
+    <p>{{object | json}}</p>
+    <ul>
+        <li *ngFor="let coll of collection | slice: 1: 3">{{coll}}</li>
+    </ul>
+    <p>{{2 | exponentialStrength:3}}</p>
+</div>

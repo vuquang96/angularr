@@ -4,11 +4,16 @@ import { FormsModule } from '@angular/forms'
 
 import { AppComponent } from './app.component';
 import { Training } from './training/training.component';
+import { ExponentialStrength } from './pipe/exponential-strength.pipe';
+import { InfoComponent } from './training/form/info/info.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    Training
+    InfoComponent,
+    Training,
+    ExponentialStrength
+    
   ],
   imports: [
     BrowserModule,
