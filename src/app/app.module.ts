@@ -6,20 +6,27 @@ import { AppComponent } from './app.component';
 import { Training } from './training/training.component';
 import { ExponentialStrength } from './pipe/exponential-strength.pipe';
 import { InfoComponent } from './training/form/info/info.component';
+import { EmployeeComponent } from './training/employee/employee.component';
+//import { EmployeeService } from './services/employee.service';
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     InfoComponent,
     Training,
-    ExponentialStrength
-    
+    ExponentialStrength,
+    EmployeeComponent,
+   
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpModule
   ],
-  providers: [],
+  providers: [
+    // EmployeeService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
