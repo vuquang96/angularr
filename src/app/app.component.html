@@ -1,6 +1,6 @@
 <!--The content below is only a placeholder and can be replaced.-->
 
-<div class="container">
+<!-- <div class="container">
   <div class="row">
     <employee></employee>
   </div>
@@ -23,7 +23,26 @@
       <form-info></form-info>
     </div>
   </div>
+</div> -->
+
+<div class="container">
+  <div class="row">
+    <section>
+      <nav class="navbar avbar-inverse">
+        <ul>
+          <li><a routerLink="">Home</a></li>
+          <li><a routerLink="employee">Employee</a></li>
+          <li><a routerLink="form">Form</a></li>
+          <li><a routerLink="training">Training</a></li>
+        </ul>
+      </nav>
+    </section>
+  </div>
+
+  <router-outlet></router-outlet>
+
+  <div class="row">
+    <Footer>Footer</Footer>
+  </div>
+
 </div>
-
-
-

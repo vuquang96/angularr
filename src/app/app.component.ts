@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { Training } from './training/training.component';
+import { Training } from './training/training/training.component';
 import { InfoComponent } from './training/form/info/info.component';
 
 @Component({
