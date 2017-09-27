@@ -1,0 +1,24 @@
+<table class="table" *ngIf="employee">
+    <tr>
+        <td>Name</td>
+        <td>{{employee.name}}</td>
+    </tr>
+    <tr>
+        <td>Age</td>
+        <td>{{employee.age}}</td>
+    </tr>
+    <tr>
+        <td>Status</td>
+        <td>{{employee.status}}</td>
+    </tr>
+    <tr>
+        <td>Name</td>
+        <td>{{employee.createdAt | date}}</td>
+    </tr>   
+</table>
+<div class="row">
+    <button class="btn" ><a [routerLink]="['over-view']">Over View</a></button>
+    <button class="btn" ><a [routerLink]="['product']">Product</a></button>
+</div>
+
+<router-outlet></router-outlet>

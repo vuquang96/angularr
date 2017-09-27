@@ -9,8 +9,18 @@ import { Training } from './training/training/training.component';
 import { ExponentialStrength } from './pipe/exponential-strength.pipe';
 import { InfoComponent } from './training/form/info/info.component';
 import { EmployeeComponent } from './training/employee/employee.component';
+import { DetailEmployeeComponent } from './training/employee/detail/detail-employee.component';
+import { EditEmployeeComponent } from './training/employee/edit/edit-employee.component';
 //import { EmployeeService } from './services/employee.service';
 import { HttpModule } from '@angular/http';
+import { NotFoundComponent } from './training/notfound/notfound.component';
+import { DetailEmployeeOverViewComponent } from './training/employee/detail/over-view/over-view.component';
+import { ProductEmployeeComponent } from './training/employee/detail/product/product-employee.component';
+import { LoginComponent } from './training/login/login.component';
+import { CheckLoginGuard } from './guards/check-login.guard';
+import { CheckSaveFormGuard } from './guards/check-save-from.guard';
+import { LoginService } from './services/login.service';
+import { AddEmployeeComponent } from './training/employee/add/add-employee.component';
 
 @NgModule({
   declarations: [
@@ -19,16 +29,26 @@ import { HttpModule } from '@angular/http';
     Training,
     ExponentialStrength,
     EmployeeComponent,
-    HomeComponent
+    HomeComponent,
+    NotFoundComponent,
+    DetailEmployeeComponent,
+    DetailEmployeeOverViewComponent,
+    ProductEmployeeComponent,
+    LoginComponent,
+    EditEmployeeComponent,
+    AddEmployeeComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    AppRoute
+    AppRoute,
   ],
   providers: [
     // EmployeeService
+    LoginService,
+    CheckLoginGuard,
+    CheckSaveFormGuard
   ],
   bootstrap: [AppComponent]
 })

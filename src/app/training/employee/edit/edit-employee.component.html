@@ -1,0 +1,17 @@
+<form #editEmployee="ngForm" (ngSubmit)="edit()" *ngIf="employee">
+    <table class="table">
+        <tr>
+            <td>Name</td>
+            <td><input type="text" name="name" [(ngModel)]="employee.name"   /></td>
+        </tr>
+        <tr>
+            <td>Age</td>
+            <td><input type="number" name="age" [(ngModel)]="employee.age"  /></td>
+        </tr>
+        <tr>
+            <td>Status</td>
+            <td><input type="checkbox" name="status" [(ngModel)]="employee.status"  /></td>
+        </tr>
+        <button type="submit">Edit</button>
+    </table>
+</form>

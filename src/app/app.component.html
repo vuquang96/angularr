@@ -25,24 +25,37 @@
   </div>
 </div> -->
 
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand" routerLinkActive="active" routerLink="">Home</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a  class="nav-link" routerLinkActive="active" routerLink="employee">Employee</a></li>
+        <li class="nav-item"><a  class="nav-link" routerLinkActive="active" routerLink="form">Form</a></li>
+        <li class="nav-item"><a  class="nav-link" routerLinkActive="active" routerLink="training">Training</a></li>
+        <li class="nav-item"><a  class="nav-link" routerLinkActive="active" routerLink="login">Login</a></li>
+        <li class="nav-item"><a  class="nav-link" (click)="logout()">Logout</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Page Content -->
 <div class="container">
-  <div class="row">
-    <section>
-      <nav class="navbar avbar-inverse">
-        <ul>
-          <li><a routerLink="">Home</a></li>
-          <li><a routerLink="employee">Employee</a></li>
-          <li><a routerLink="form">Form</a></li>
-          <li><a routerLink="training">Training</a></li>
-        </ul>
-      </nav>
-    </section>
-  </div>
-
+  <br /><br /><br />
   <router-outlet></router-outlet>
-
-  <div class="row">
-    <Footer>Footer</Footer>
-  </div>
-
+  
 </div>
+<!-- /.container -->
+
+<!-- Footer -->
+<footer class="py-5 bg-dark">
+  <div class="container">
+    <p class="m-0 text-center text-white">Copyright &copy; Your Website 2017</p>
+  </div>
+</footer>

@@ -1,0 +1,17 @@
+<form #editEmployee="ngForm" (ngSubmit)="add(editEmployee.value)">
+    <table class="table">
+        <tr>
+            <td>Name</td>
+            <td><input type="text" name="name" ngModel/></td>
+        </tr>
+        <tr>
+            <td>Age</td>
+            <td><input type="number" name="age" ngModel /></td>
+        </tr>
+        <tr>
+            <td>Status</td>
+            <td><input type="checkbox" name="status" ngModel /></td>
+        </tr>
+        <button type="submit">Add new</button>
+    </table>
+</form>
